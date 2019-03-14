@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -10,15 +11,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-class GUI {
-    /*
-    You generally seem to have this in hand, but I'll add some methods for communicating with the logic
-    */
-
-    Logic l;
-
-    public GUI(Logic l){
-    this.l = l;
+public class UserInterface extends Application {
+	
+	//Source: https://stackoverflow.com/questions/47296215/set-labels-and-text-field-alignment-in-javafx
 	 public int i = 2; 
 	 private ArrayList<TextField> fieldList = new ArrayList<TextField>(); 
 
@@ -70,20 +65,7 @@ class GUI {
     	 });
 
     	}
-    }
-
-    //Get emails from the logic for display
-    public void getEmails(){
-
-    }
-
-    //Pass the currently displayed list of emails to the logic
-    public void passEmails(){
-
-    }
-
-    //Mark the list of emails
-    public void markEmails(ArrayList<String> emailAddresses){
-        l.markEmails(emailAddresses);
-    }
 }
+//Method to save to Logic.
+//Mehod to take from logic.
+//Method to get email users. 
