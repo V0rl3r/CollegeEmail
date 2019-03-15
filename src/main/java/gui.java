@@ -10,17 +10,20 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-class GUI {
+class GUI extends Application{
     /*
     You generally seem to have this in hand, but I'll add some methods for communicating with the logic
     */
 
     Logic l;
+	public int i;
+	private ArrayList<TextField> fieldList;
 
     public GUI(Logic l){
-    this.l = l;
-	 public int i = 2; 
-	 private ArrayList<TextField> fieldList = new ArrayList<TextField>(); 
+		this.l = l;
+		i = 2; 
+		fieldList = new ArrayList<TextField>();
+	}
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -69,7 +72,6 @@ class GUI {
     		 pane.getChildren().remove(fieldList.size()); 
     	 });
 
-    	}
     }
 
     //Get emails from the logic for display
