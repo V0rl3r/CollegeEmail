@@ -17,6 +17,7 @@ class Logic {
 
     GmailQuickstart gq;
     GUI gui;
+    String emails; 
 
     public static void main(String[] args) throws IOException, GeneralSecurityException {
         

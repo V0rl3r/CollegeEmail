@@ -61,12 +61,13 @@ class GUI extends Application{
 
     	 addbutton.setOnAction(e -> {
     		 Label l = new Label(Integer.toString(fieldList.size())); 
-    		 TextField addfield = new TextField("Enter addrehenryss here!"); 
+    		 TextField addfield = new TextField("Enter address here!"); 
     		 fieldList.add(addfield); 
     		 pane.add(addfield, 1 , i);
     		 pane.add(l, 0, i);
     		 i++; 
-    	 });
+		 });
+		
     	
     	 removebutton.setOnAction(e -> {
     		 pane.getChildren().remove(fieldList.size()); 
@@ -75,13 +76,13 @@ class GUI extends Application{
     }
 
     //Get emails from the logic for display
-    public void getEmails(){
-
+    public String getEmails(){
+		return logic.emails; 
     }
 
     //Pass the currently displayed list of emails to the logic
-    public void passEmails(){
-
+    public void passEmails(FieldList f){
+		logic.emails = f.getChildren(); 
     }
 
     //Mark the list of emails
