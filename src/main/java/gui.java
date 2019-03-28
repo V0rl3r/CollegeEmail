@@ -76,13 +76,14 @@ class GUI extends Application{
     }
 
     //Get emails from the logic for display
-    public String getEmails(){
-		return logic.emails; 
+    public String getEmails(){		
+	HostServices hostServices = getHostServices() ; 
+	return logic.emails; 
     }
 
     //Pass the currently displayed list of emails to the logic
     public void passEmails(FieldList f){
-		logic.emails = f.getChildren(); 
+		logic.emails = FieldList.getChildren().toString(); 
     }
 
     //Mark the list of emails
